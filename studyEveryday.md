@@ -1,6 +1,5 @@
-#获取信息
 ###reddit javascript
-###https://www.reddit.com/r/javascript/
+https://www.reddit.com/r/javascript/
 ###Front-end Front
 https://frontendfront.com/
 ###css-tricks
