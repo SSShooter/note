@@ -26,6 +26,7 @@ console.log('\u0061');       // => 'a'
 ###16进制转义序列
 最简短的形式称为16进制转义序列：\x<hex>. \x为前缀，后面跟一个2位的16进制数。
 某些字符需要2个以上的码元来表示。所以在计算字符长度或通过字符串索引访问字符时要格外小心。
+比如'\x30'（字符 '0'）和'\x5B'（字符 '['）。
 ```javascript
 let smile = '\uD83D\uDE00';  
 console.log(smile);        // => ''  
@@ -34,5 +35,38 @@ console.log(smile.length); // => 2
 let letter = 'e\u0301';  
 console.log(letter);        // => 'é'  
 console.log(letter.length); // => 2
+```
+
+###Unicode转义序列
+如果你想转义整个BMP中的代码点，那就用Unicode转义序列。转义形式是\u<hex>,\u为前缀，后面跟一个4位的16进制数。
+比如 '\u0051' （字符 'Q'）和'\u222B' （积分符号 '∫'）.
+```javascript
+var str = 'I\u0020learn \u0055nicode';  
+console.log(str);                 // => 'I learn Unicode'  
+var reg = /\u0055ni.*/;  
+console.log(reg.test('Unicode')); // => true
+```
+对于星光
+```javascript
+var str = 'My face \uD83D\uDE00';  
+console.log(str); // => 'My face '
+```
+
+###代码点转义序列
+ECMAScript 2015提供了能够表示整个Unicode空间：从U+0000到U+10FFFF，也就是BMP与星光平面的转义序列。
+这种新格式被称为代码点转义序列：\u{<hex>}，<hex>是一个长度为1至6位的16进制数。 比如'\u{7A}'（字符'z'）和'\u{1F639}'（Funny cat符号）。
+```javascript
+var str = 'Funny cat \u{1F639}';  
+console.log(str);                      // => 'Funny cat '  
+var reg = /\u{1F639}/u;  
+console.log(reg.test('Funny cat ')); // => true
+```
+注意正则表达式/\u{1F639}/u有一个特殊flagu,它支持额外的Unicode特性
+```javascript
+var niceEmoticon = '\u{1F607}';  
+console.log(niceEmoticon);   // => ''  
+var spNiceEmoticon = '\uD83D\uDE07'  
+console.log(spNiceEmoticon); // => ''  
+console.log(niceEmoticon === spNiceEmoticon); // => true
 ```
 
