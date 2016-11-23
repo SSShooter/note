@@ -1,1 +1,16 @@
-# note
+###reddit javascript
+https://www.reddit.com/r/javascript/
+###Front-end Front
+https://frontendfront.com/
+###css-tricks
+https://css-tricks.com/
+###jobbole
+http://web.jobbole.com/
+###DIV.IO
+http://div.io/pro/index
+
+##blog
+###ruanyifeng
+http://www.ruanyifeng.com/blog/
+###alloyteam
+http://www.alloyteam.com/
