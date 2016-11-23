@@ -1,3 +1,5 @@
+#studyEveryday
+
 ###reddit javascript
 https://www.reddit.com/r/javascript/
 ###Front-end Front
