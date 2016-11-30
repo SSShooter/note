@@ -10,6 +10,8 @@ https://css-tricks.com/
 http://web.jobbole.com/
 ###DIV.IO
 http://div.io/pro/index
+###Qiita
+http://qiita.com/
 
 ##blog
 ###ruanyifeng
