@@ -12,6 +12,8 @@ http://web.jobbole.com/
 http://div.io/pro/index
 ###Qiita
 http://qiita.com/
+###V2EX
+https://www.v2ex.com/
 
 ##blog
 ###ruanyifeng
